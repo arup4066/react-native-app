@@ -7,7 +7,7 @@ import NetInfo from '@react-native-community/netinfo';
 const NoInternetComponent = ({navigation}) => {
   useEffect(() => {
     const backAction = () => {
-      navigation.navigate('/');
+      BackHandler.exitApp();
       return true;
     };
 

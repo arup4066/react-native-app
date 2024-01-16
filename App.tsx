@@ -12,52 +12,13 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 const Stack = createNativeStackNavigator();
 import TouchID from 'react-native-touch-id';
-import {BackHandler} from 'react-native';
+import {BackHandler, Text} from 'react-native';
 
 // create a component
 const App = () => {
-  const [auth, setAuth] = useState(false);
-  const [active, setActive] = useState(true);
-
-  useEffect(() => {
-    handleBioMatric();
-  });
-  const optionalConfigObject = {
-    title: 'Authentication Required', // Android
-    imageColor: '#e00606', // Android
-    imageErrorColor: '#ff0000', // Android
-    sensorDescription: 'Touch sensor', // Android
-    sensorErrorDescription: 'Failed', // Android
-    cancelText: 'Cancel', // Android
-    fallbackLabel: 'Show Passcode', // iOS (if empty, then label is hidden)
-    unifiedErrors: false, // use unified error messages (default false)
-    passcodeFallback: false,
-  };
-  const handleBioMatric = () => {
-    TouchID.isSupported(optionalConfigObject).then(biometryType => {
-      // Success code
-      if (biometryType === 'FaceID') {
-        console.log('FaceID is supported.');
-      } else {
-        if (auth) {
-          return null;
-        }
-        TouchID.authenticate('', optionalConfigObject)
-          .then(success => {
-            console.log('success', success);
-            setAuth(success);
-          })
-          .catch(error => {
-            console.log('error', error);
-            BackHandler.exitApp();
-          });
-      }
-    });
-  };
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>
-        <Stack.Screen name="/" component={Home} />
         <Stack.Screen name="/webView" component={WebViewComponent} />
         <Stack.Screen name="/noInternet" component={NoInternetComponent} />
       </Stack.Navigator>

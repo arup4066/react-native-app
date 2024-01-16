@@ -24,7 +24,7 @@ const WebViewComponent = ({navigation}) => {
   const [refreshing, setRefreshing] = useState(false);
   const [auth, setAuth] = useState(false);
 
-  const url = 'https://www.google.com/';
+  const url = 'https://24casino.in/login';
 
   //biomatric handler start
   useEffect(() => {

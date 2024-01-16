@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "698384892639",
-    "project_id": "dummy-68aff",
-    "storage_bucket": "dummy-68aff.appspot.com"
+    "project_number": "514195486961",
+    "project_id": "test-react-11d4d",
+    "storage_bucket": "test-react-11d4d.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:698384892639:android:f5677dcee368f238f45f6a",
+        "mobilesdk_app_id": "1:514195486961:android:a9bee20bac092a72015150",
         "android_client_info": {
           "package_name": "com.awesomeproject"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBLdbolNXF1_KNVIVeq-0tUQXgv8Cn9fl4"
+          "current_key": "AIzaSyBwjATe2_gRa5yRX5Hra_dL0HsHCborSjY"
         }
       ],
       "services": {
